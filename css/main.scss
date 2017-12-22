@@ -1,0 +1,29 @@
+/* Background */
+@import 'base';
+
+html {
+  background-image: url("../img/ethereum-rainbow.jpg") !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 1;
+  color: white;
+  min-height: 800px;
+}
+
+.background{
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 800px;
+}
+
+.prarsley-errors-list.filled {
+  margin-bottom: 0px;
+}
+
+
+

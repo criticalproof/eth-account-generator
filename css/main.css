@@ -1,0 +1,121 @@
+/* Background */
+.primary-color {
+  color: #00c489; }
+
+body h1, h2, h3, h4, h5, p, a, div, select, textarea {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.5; }
+
+input {
+  color: black; }
+
+html {
+  background: #000; }
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 90%;
+    padding: 0 10px; } }
+table {
+  box-sizing: border-box;
+  overflow: auto;
+  margin: auto; }
+
+table th {
+  padding: 2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-bottom-color: rgba(107, 107, 107, 0.5);
+  border-bottom-width: 0.1px; }
+
+@media screen and (max-width: 550px) {
+  table th {
+    padding: .8rem;
+    font-size: 1.2rem; } }
+@media screen and (max-width: 400px) {
+  table th {
+    padding: .5rem;
+    font-size: 1rem; } }
+table thead th {
+  text-align: center; }
+
+table thead th.active, td.active {
+  background-color: rgba(0, 196, 137, 0.3); }
+
+table td {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.7rem;
+  border-bottom-color: rgba(107, 107, 107, 0.5);
+  border-bottom-width: 0.5px; }
+
+@media screen and (max-width: 550px) {
+  table td {
+    padding: .8rem;
+    font-size: 1.2rem; } }
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5; }
+
+footer {
+  color: darkgray;
+  margin-top: 10rem;
+  text-align: center;
+  position: fixed;
+  bottom: 3rem; }
+
+@media screen and (max-width: 550px) {
+  footer {
+    margin-top: 5rem;
+    margin-bottom: 2rem; } }
+/* Buttons */
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #fff;
+  padding: 0 1rem;
+  background-color: #00c489;
+  border-color: #00c489; }
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #fff;
+  background-color: #00B37D;
+  border-color: #00B37D; }
+
+html {
+  background-image: url("../img/ethereum-rainbow.jpg") !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 1;
+  color: white;
+  min-height: 800px; }
+
+.background {
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 800px; }
+
+.prarsley-errors-list.filled {
+  margin-bottom: 0px; }
+
+/*# sourceMappingURL=main.css.map */

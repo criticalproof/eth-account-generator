@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Ethereum Account Generator</title>
+  <meta charset="utf-8" />
+  <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Configured Head Tags  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="icon/manifest.json">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  
+</head>
+<body>
+
+<div class="background background-overlay">
+
+  <!-- Main Page -->
+  <div class="container">
+
+    <header>
+      <h1>
+        Ethereum Account Generator
+      </h1>
+    </header>
+
+    <section>
+      <div id="step-1">
+        <h3>
+          Enter a password 8 characters or longer and confirm it to create a new Ethereum account.
+        </h3>
+        <form data-parsley-validate id="passwordForm">
+          <label>Password:</label>
+          <input type="password" name="password" id="password" value="" data-parsley-required data-parsley-minlength="8" onkeyup="formChanged()" onchange="formChanged()"/>
+          <br>
+          <br>
+          <label>Confirm:</label>
+          <input type="password" name="confirm" id="confirm" value="" data-parsley-required data-parsley-equalto="#password" onkeyup="formChanged()" onchange="formChanged()"/>
+          <br>
+          <br>
+          <br>
+          <input type="submit" class="btn btn-default" value="Create">
+        </form>
+      </div>
+
+      <div id="step-2" hidden>
+        <h3>
+          Your account has been created!
+        </h3>
+        <h3>
+          Click the KEYSTORE FILE below to download it
+        </h3>
+        <p>(You must have your keystore file to access your wallet! Keep it in a safe place!)</p>
+        <a href="" id="keystore-file-link" onclick="enableNext()"><h5></h5></a>
+        <br>
+        <button id='step-2-next-button' disabled="true" onclick="proceedToNext('#step-2','#step-3')">Next</button>
+      </div>
+
+      <div id="step-3" hidden>
+        <h5>
+          Below is your new wallet's <strong>PUBLIC ADDRESS</strong>.
+        </h5>
+        <h6>
+          It is used to find your account on the Ethereum network, and you must know this address to interact with the network. It does not need to be kept secret, but you should store this address so it can be found when you need it.
+        </h6>
+        <div id="pubkey-display">
+          <h5></h5>
+        </div>
+        <button onclick="copyToClipboard('#pubkey-display')">Copy PUBLIC ADDRESS to clipboard</button>
+        <br>
+        <br>
+        <button onclick="proceedToNext('#step-3','#step-2')">Back</button>
+        <button onclick="proceedToNext('#step-3','#step-4')">Next</button>
+      </div>
+
+      <div id="step-4" hidden>
+        <h5>
+          You must save your <strong>PASSWORD</strong> in a safe and secure place!
+        </h5>
+        <h6>
+          Your password is the only way to unlock your KEYSTORE FILE, without it your Ethereum account cannot be accessed.
+        </h6>
+        <h6>
+          Also, if others find/know your password they will have full access your wallet. So, your password <strong>must be stored in a safe and secure place</strong>.
+        </h6>
+        <h6>
+          You can store your password in following ways:
+        </h6>
+        <h6>
+          - Toggle the password display button below and write your password down to store in a safe place, or
+        </h6>
+        <h6>
+          - Click the password copy button below and save the copied password in a safe place
+        </h6>
+        <br>
+        <br>
+        <div id="password-display">
+          <h5></h5>
+        </div>
+        <button onclick="togglePassDisplay()">Hide/Show Password</button>
+        <button onclick="copyToClipboard('#password-display')">Copy PASSWORD to clipboard</button>
+        <br>
+        <br>
+        <button onclick="proceedToNext('#step-4','#step-3')">Back</button>
+        <button onclick="proceedToNext('#step-4','#step-5')">Next</button>
+      </div>
+
+      <div id="step-5" hidden>
+        <h5>
+          Really, be sure to save your <strong>KEYSTORE FILE AND PASSWORD</strong> in a safe place!
+        </h5>
+        <h6>
+          Your KEYSTORE FILE and PASSWORD are both required to open and transact with your new account.
+        </h6>
+        <h6>
+          If you lose/forget either one of these items, the wallet is no longer accessible!
+        </h6>
+        <h6>
+          If an attacker gains access to both of these items they can hijack your account.
+        </h6>
+        <h6>
+          Keep them secret, keep them safe!
+        </h6>
+        <button onclick="proceedToNext('#step-5','#step-4')">Back</button>
+        <button onclick="proceedToNext('#step-5','#step-1')">Make Another Account</button>
+        <p>
+          (After clicking "Make Another Account your password, address, and keystore file will be removed from memory and cannot be recovered by this application.)
+        </p>
+      </div>
+
+
+    </section>
+
+    <footer>
+      &copy;2017 Terry Wilkinson All Rights Reserved
+    </footer>
+
+  </div>
+  <script src="./js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="./js/fso.min.js" type="text/javascript"></script>
+  <script src="./js/keythereum.min.js" type="text/javascript"></script>
+  <script src="./js/parsley.min.js" type="text/javascript"></script>
+  <script src="./js/main.js" type="text/javascript"></script>
+</div>
+</body>
+
+</html>
