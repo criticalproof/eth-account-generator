@@ -72,6 +72,8 @@ function proceedToNext(current_selector, next_selector) {
 }
 
 function enableNext(){
+    //remove block msg span
+    $( ".download-span" ).remove()
     // re-disable step-2 next
     $('#step-2-next-button').prop('disabled', false);
 }
@@ -91,5 +93,9 @@ function copyToClipboard(element) {
     $temp.val($(element).text().trim()).select();
     document.execCommand("copy");
     $temp.remove();
-    $(element).css('background-color', 'grey');
+    $(".copy").after('<span class="copy-span" style="margin-left:20px;">Copied!</span>');
+    $( ".copy-span" ).fadeOut( 1600, function() {
+        // Animation complete.
+        $( ".copy-span" ).remove()
+      });
 }

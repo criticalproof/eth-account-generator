@@ -56,15 +56,15 @@
         <h3>
           Click the KEYSTORE FILE below to download it
         </h3>
-        <p>(You must have your keystore file to access your wallet! Keep it in a safe place!)</p>
+        <p>(You must have your keystore file to access your ETH account! Keep it in a safe place!)</p>
         <a href="" id="keystore-file-link" onclick="enableNext()"><h5></h5></a>
         <br>
-        <button id='step-2-next-button' disabled="true" onclick="proceedToNext('#step-2','#step-3')">Next</button>
+        <button id='step-2-next-button' disabled="true" onclick="proceedToNext('#step-2','#step-3')">Next</button> <span class="download-span" style="margin-left:20px;">You must download the above keystore to proceed.</span>
       </div>
 
       <div id="step-3" hidden>
         <h5>
-          Below is your new wallet's <strong>PUBLIC ADDRESS</strong>.
+          Below is your new ETH account's <strong>PUBLIC ADDRESS</strong>.
         </h5>
         <h6>
           It is used to find your account on the Ethereum network, and you must know this address to interact with the network. It does not need to be kept secret, but you should store this address so it can be found when you need it.
@@ -72,7 +72,7 @@
         <div id="pubkey-display">
           <h5></h5>
         </div>
-        <button onclick="copyToClipboard('#pubkey-display')">Copy PUBLIC ADDRESS to clipboard</button>
+        <button class="copy" onclick="copyToClipboard('#pubkey-display')">Copy PUBLIC ADDRESS to clipboard</button>
         <br>
         <br>
         <button onclick="proceedToNext('#step-3','#step-2')">Back</button>
@@ -104,7 +104,7 @@
           <h5></h5>
         </div>
         <button onclick="togglePassDisplay()">Hide/Show Password</button>
-        <button onclick="copyToClipboard('#password-display')">Copy PASSWORD to clipboard</button>
+        <button class="copy" onclick="copyToClipboard('#password-display')">Copy PASSWORD to clipboard</button>
         <br>
         <br>
         <button onclick="proceedToNext('#step-4','#step-3')">Back</button>
