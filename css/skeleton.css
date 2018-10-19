@@ -203,6 +203,12 @@ input[type="button"]:focus {
   color: #36B7FC;
   border-color: #36B7FC;
   outline: 0; }
+.button:disabled,
+button:disabled,
+input[type="button"]:disabled {
+  color: #E3E3E3;
+  border-color: #E3E3E3;
+  outline: 0; }
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
