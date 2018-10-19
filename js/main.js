@@ -88,7 +88,7 @@ function togglePassDisplay(){
 function copyToClipboard(element) {
     var $temp = $("<input>");
     $("body").append($temp);
-    $temp.val($(element).text()).select();
+    $temp.val($(element).text().trim()).select();
     document.execCommand("copy");
     $temp.remove();
     $(element).css('background-color', 'grey');
